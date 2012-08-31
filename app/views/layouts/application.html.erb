@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Caminar</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag    "redactor"%>
+
+
+  <%= javascript_include_tag "jquery-1.7.min" %>
+  <%= javascript_include_tag "redactor" %>
+  <%= javascript_include_tag "redactor.min" %>
+
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>
