@@ -1,0 +1,28 @@
+!!!
+%html
+  %head
+    %title Caminar
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    .wrapped
+      .main-container
+        .header
+          .top
+            .slogan
+              %span Slogan
+            .call-number
+              Llamanos al 1551822
+          .menu
+            .button.first
+              = link_to "Home", "#"
+            .button
+              = link_to "Quienes somos?", "#"
+            .button
+              = link_to "Profesionales", "#"
+            .button.last
+              = link_to "Contacto", "#"
+        .middle
+          = yield
+    .footer

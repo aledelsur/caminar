@@ -1,7 +1,4 @@
 ActiveAdmin.register HomePhoto do
-
-  actions :index, :edit, :destroy, :update
-
   #Eliminar filters
   config.clear_sidebar_sections!
 
@@ -14,14 +11,11 @@ ActiveAdmin.register HomePhoto do
     f.buttons
   end
 
-
   index do
-	column :text
-	column :photo do |photo|
-	  image_tag(photo.photo, :class=>"home_photo_img")
-	end
+	  column :text
+	  column :photo do |photo|
+	    image_tag(photo.photo, :class=>"home_photo_img")
+	  end
   	default_actions
   end
-
-  
 end

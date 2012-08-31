@@ -1,0 +1,72 @@
+@mixin white-degrade {
+  background-image: -moz-linear-gradient(top, #ffffff, #f4f4f4);
+  background-image: -ms-linear-gradient(top, #ffffff, #f4f4f4);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#f4f4f4));
+  background-image: -webkit-linear-gradient(top, #ffffff, #f4f4f4);
+  background-image: -o-linear-gradient(top, #ffffff, #f4f4f4);
+  background-image: linear-gradient(top, #ffffff, #f4f4f4);
+}
+@mixin slogan-font{
+  font: normal normal normal 42px/1.3em Overlock, sans-serif;
+}
+body{
+  //background: #d8b587;
+  background: #00b8e7;
+  .main-container{
+    margin: auto;
+    width:980px;
+    .header{
+      height: 206px;
+      .slogan{
+        color: white;
+        width: 30%;
+        float: left;
+        padding: 45px;
+        span{
+          @include slogan-font;
+        }
+      }
+      .call-number{
+        color: white;
+        width: 55%;
+        float: right;
+        padding-top: 66px;
+        font-size: 20pt;
+        span{
+          @include slogan-font;
+        }
+      }
+      .top{
+        height: 150px;
+      }
+      .menu{
+        height:50px;
+        background-color: #f4f4f4;
+        border-radius: 10px 10px 0px 0px;
+        .button{
+          @include white-degrade;
+          float:left;
+          width: 245px;
+          text-align: center;
+        }
+        .button.first{
+          border-radius: 10px 0px 0px 0px;
+        }
+        .button.last{
+          border-radius: 0px 10px 0px 0px;
+        }
+      }
+    }
+    .middle{
+      height: 817px;
+      background: #F4F4F4;
+    }
+  }
+  .footer{
+    border:1px solid black;
+    width: 100%;
+    height: 314px;
+    margin-bottom: 50px;
+    background: white;
+  }
+}

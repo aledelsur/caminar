@@ -5,12 +5,13 @@
 #   gem 'sqlite3'
 development:
   adapter: mysql2
+  encoding: utf8
+  reconnect: false
   database: caminar_development
   pool: 5
   username: root
-  password: mypassword
+  password: vs
   host: localhost
-  timeout: 5000
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -19,14 +20,16 @@ test:
   adapter: mysql2
   database: caminar_test
   username: root
-  password: mypassword
+  password: vs
   pool: 5
   timeout: 5000
 
 production:
   adapter: mysql2
-  username: root
-  password:   
+  encoding: utf8
+  reconnect: false
   database: caminar_production
   pool: 5
-  timeout: 5000
+  username: root
+  password: b4r1l0
+  host: localhost
