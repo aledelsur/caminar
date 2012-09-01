@@ -11,7 +11,7 @@ set :user, "lucasminissale"
 set :scm_username, "lucasminissale"
 
 default_run_options[:pty] = true
-
+set :rvm_ruby_string, 'ruby-1.9.3-p194@caminar'
 # if you want to clean up old releases on each deploy uncomment this:
 # after "deploy:restart", "deploy:cleanup"
 
