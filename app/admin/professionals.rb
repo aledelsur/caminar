@@ -1,8 +1,9 @@
 ActiveAdmin.register Professional do
 
-  actions :index, :edit, :destroy, :update
+  actions :index, :edit, :new, :destroy, :update
   filter :name
 
+  menu :label => "Profesionales"
   index do
     column :name
 	column :photo do |photo|

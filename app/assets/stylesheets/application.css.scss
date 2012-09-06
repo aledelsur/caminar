@@ -11,3 +11,22 @@
  *= require_self
  *= require_tree .
  */
+
+@mixin fon-text { color: #007B9A; font: 22px/1.3em "Overlock","sans-serif";}
+
+.home_photo {padding: 3%;}
+.home_photo img{width: 100%; height: 550px;}
+.page_modules .module{
+    border: 1px solid; float: left; margin-left: 1%; padding: 2%; width: 27%;
+    .title{@include fon-text; margin-bottom: 2%;}
+    .text{color: #606060; font: 13px/1.3em "Open Sans","sans-serif";} 
+  }
+  .clear{clear: both;}
+
+.footer .content{
+  margin-left: 23%; margin-right: 23%;
+  .title{@include fon-text;}
+  .text{width: 22%;}
+}
+
+    

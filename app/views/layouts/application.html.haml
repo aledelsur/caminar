@@ -3,7 +3,10 @@
   %head
     %title Caminar
     = stylesheet_link_tag    "application", :media => "all"
+    = stylesheet_link_tag    "redactor", :media => "all"
+    = javascript_include_tag "redactor"
     = javascript_include_tag "application"
+
     = csrf_meta_tags
   %body
     .wrapped
@@ -16,13 +19,14 @@
               Llamanos al 1551822
           .menu
             .button.first
-              = link_to "Home", "#"
+              = link_to "Home", index_path("home")
             .button
-              = link_to "Quienes somos?", "#"
+              = link_to "Quienes somos?", index_path("about")
             .button
-              = link_to "Profesionales", "#"
+              = link_to "Profesionales", index_path("professionals")
             .button.last
-              = link_to "Contacto", "#"
+              = link_to "Contacto", index_path("contact")
         .middle
           = yield
     .footer
+      =render partial: "footer"

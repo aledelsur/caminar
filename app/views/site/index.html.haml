@@ -1,0 +1,20 @@
+- if @event == "home"
+  .home_photo
+    = image_tag (@home_photos.first.photo.url(:small))
+  .clear
+  .page_modules
+    - @page_modules.each do |page_module|
+      .module
+        .title
+          = page_module.title
+        .text
+          = page_module.text
+- if @event == "about"
+  holas
+- if @event == "professionals"
+  - @professionals.each do |professional|
+    = professional.name
+    = professional.title
+    = professional.text
+- if @event == "contact"
+  hola

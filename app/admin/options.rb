@@ -5,6 +5,7 @@ ActiveAdmin.register Option do
   #Eliminar filters
   config.clear_sidebar_sections!
 
+  menu :label => "Opciones"
   index do
     column :key
     column :value

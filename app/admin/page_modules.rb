@@ -5,6 +5,7 @@ ActiveAdmin.register PageModule do
   #Eliminar filters
   config.clear_sidebar_sections!
 
+  menu :label => "Modulos"
   index do
     column :title
     column :text
