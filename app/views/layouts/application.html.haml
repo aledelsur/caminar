@@ -4,7 +4,9 @@
     %title Caminar
     = stylesheet_link_tag    "application", :media => "all"
     = stylesheet_link_tag    "redactor", :media => "all"
-    = javascript_include_tag "redactor"
+
+    = javascript_include_tag "jquery"
+    = javascript_include_tag "s3Slider"
     = javascript_include_tag "application"
 
     = csrf_meta_tags
@@ -19,14 +21,13 @@
               Llamanos al 1551822
           .menu
             .button.first
-              = link_to "Home", index_path("home")
+              = link_to raw("<span>Home</span>"), index_path("home"), :class => ("selected" if @event == "home") 
             .button
-              = link_to "Quienes somos?", index_path("about")
+              = link_to raw("<span>¿Quienes somos?</span>"), index_path("about"), :class => ("selected" if @event == "about") 
             .button
-              = link_to "Profesionales", index_path("professionals")
+              = link_to raw("<span>Profesionales</span>"), index_path("professionals"), :class => ("selected" if @event == "professionals") 
             .button.last
-              = link_to "Contacto", index_path("contact")
-        .middle
-          = yield
+              = link_to raw("<span>Contacto</span>"), index_path("contact"), :class => ("selected" if @event == "contact") 
+        = yield
     .footer
       =render partial: "footer"
