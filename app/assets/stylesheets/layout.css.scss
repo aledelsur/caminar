@@ -9,7 +9,9 @@
 @mixin slogan-font{
   font: normal normal normal 42px/1.3em Overlock, sans-serif;
 }
-@mixin fon-text { color: #007B9A; font: 22px/1.3em "Overlock","sans-serif";}
+@mixin fon-title { color: #007B9A; font: 22px/1.3em "Overlock","sans-serif";}
+@mixin fon-text {color: #606060; font: 13px/1.3em "Open Sans","sans-serif";}
+@mixin page-title {color: #888888; font: 22px/1.3em "Overlock","sans-serif";}
 
 body{
   background: #00b8e7;
@@ -96,7 +98,7 @@ body{
     background: white;
     .content{
       margin-left: 23%; margin-right: 23%;
-      .title{@include fon-text;}
+      .title{@include fon-title;}
       .text{width: 22%;}
     }
   }
@@ -111,8 +113,8 @@ body{
       margin-right: 22px;
       padding: 2%;
       width: 27%;
-      .title{@include fon-text; margin-bottom: 2%;}
-      .text{color: #606060; font: 13px/1.3em "Open Sans","sans-serif";} 
+      .title{@include fon-title; margin-bottom: 2%;}
+      .text{@include fon-text;} 
       box-shadow: 10px 10px 5px #888;
       @include white-degrade;
     }
