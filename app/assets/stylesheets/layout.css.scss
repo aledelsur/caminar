@@ -9,6 +9,8 @@
 @mixin slogan-font{
   font: normal normal normal 42px/1.3em Overlock, sans-serif;
 }
+@mixin fon-text { color: #007B9A; font: 22px/1.3em "Overlock","sans-serif";}
+
 body{
   //background: #d8b587;
   background: #00b8e7;
@@ -45,23 +47,44 @@ body{
         border-radius: 10px 10px 0px 0px;
         .button{
           @include white-degrade;
+          height: 50px;
           float:left;
-          width: 245px;
+          width: 243px;
           text-align: center;
-          margin-top: 20px;
+          border-right: 2px solid #f4f4f4;
           text-decoration: none !important;
           font: 16px/1.2em "Overlock","sans-serif";
+          
+          a{
+            display:block;
+            text-decoration:none;
+            width:243;
+            height:50px;
+            font: normal normal normal 14px/1.1em 'Open Sans', sans-serif;
+            &:hover { background-color: #f4f4f4;}
+            span{
+              display:block;
+              padding-top:15px;
+            }
+          }
         }
         .button.first{
           border-radius: 10px 0px 0px 0px;
+          a{
+            border-radius: 10px 0px 0px 0px;
+          }
         }
         .button.last{
+          border-right: 0;
           border-radius: 0px 10px 0px 0px;
+          a{
+            border-radius: 0px 10px 0px 0px;
+          }
         }
       }
     }
     .middle{
-      height: 920px;
+      margin-bottom: 20px;
       background: #F4F4F4;
     }
   }
@@ -71,5 +94,28 @@ body{
     height: 314px;
     margin-bottom: 50px;
     background: white;
+    .content{
+      margin-left: 23%; margin-right: 23%;
+      .title{@include fon-text;}
+      .text{width: 22%;}
+    }
   }
+  .home_photo {
+    padding: 1%;
+  }
+
+  .page_modules{
+    margin-bottom: 24px;
+    .module{
+      float: left;
+      margin-right: 22px;
+      padding: 2%;
+      width: 27%;
+      .title{@include fon-text; margin-bottom: 2%;}
+      .text{color: #606060; font: 13px/1.3em "Open Sans","sans-serif";} 
+      box-shadow: 10px 10px 5px #888;
+      @include white-degrade;
+    }
+  }
+  .clear{clear: both;}
 }

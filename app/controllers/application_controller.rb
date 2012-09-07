@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   I18n.locale = 'es'
 
   def site_values
-    @address = Page.find_by_key("contact").contact_address
+    option = Page.find_by_key("contact")
+    @address = option.contact_address if option
   end  
 end

@@ -7,7 +7,7 @@ Caminar::Application.routes.draw do
   root :to=> "site#index"
 
   # SITE CONTROLLER
-  match '/site/:event', to: "site#index", as: "index"
+  match '/:event', to: "site#index", as: "index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
