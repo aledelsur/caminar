@@ -1,1 +1,25 @@
 .middle
+  .contact-title
+    Contacto
+  .contact
+    .left
+      = @contact_page.contact_address
+    .right
+      = form_tag send_email_path do
+        %table
+          %thead
+            %tr
+              %td
+                = text_field_tag "Nombre", nil, :placeholder=> "Nombre"
+            %tr
+              %td
+                = text_field_tag "Email", nil, :placeholder=> "Email"
+            %tr
+              %td
+                = text_field_tag "Asunto", nil, :placeholder=> "Asunto"
+            %tr
+              %td
+                = text_area_tag "Contenido"
+      = submit_tag "Enviar"  
+  .map  
+    #maps_canvas

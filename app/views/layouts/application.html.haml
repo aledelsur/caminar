@@ -6,9 +6,11 @@
     = stylesheet_link_tag    "redactor", :media => "all"
     = stylesheet_link_tag    "site"
 
+    = javascript_include_tag "https://maps.google.com/maps/api/js?sensor=true"
     = javascript_include_tag "jquery"
     = javascript_include_tag "s3Slider"
     = javascript_include_tag "application"
+    = render "/site/map"
 
     = csrf_meta_tags
   %body

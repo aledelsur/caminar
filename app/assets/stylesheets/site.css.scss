@@ -23,3 +23,10 @@
         }
     }
 }
+
+.contact-title{@include page-title; margin: 0 auto auto; padding-top: 3%; width: 92%;}
+.contact{
+  height: 500px; padding: 3%;
+  .left{@include fon-text;float: left !important; width: 18%;}
+  .right{float: right !important; width: 70%;}
+}
