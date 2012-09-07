@@ -1,4 +1,7 @@
 es:
+  time:
+    formats:
+      long: "%m/%d/%Y"
   activerecord:
     models:
       home_photo: "Fotos de portada"
