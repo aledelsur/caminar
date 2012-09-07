@@ -12,7 +12,6 @@
 @mixin fon-text { color: #007B9A; font: 22px/1.3em "Overlock","sans-serif";}
 
 body{
-  //background: #d8b587;
   background: #00b8e7;
   .main-container{
     margin: auto;
@@ -66,6 +65,7 @@ body{
               display:block;
               padding-top:15px;
             }
+            &.selected { background-color: #f4f4f4; }
           }
         }
         .button.first{

@@ -1,0 +1,19 @@
+.middle
+  .home_photo
+    #s3slider
+      %ul{:id => "s3sliderContent"}
+        - @home_photos.each do |hp|
+          %li.s3sliderImage
+            =image_tag(hp.photo.url(:home))
+            %span
+              = hp.text
+        .clear.s3sliderImage
+-if @page_modules && @page_modules.size == 3
+  .page_modules
+    - @page_modules.each do |page_module|
+      .module
+        .title
+          = page_module.title
+        .text
+          = page_module.text
+    .clear

@@ -3,10 +3,6 @@ class SiteController < ApplicationController
 
   def index
   	case params[:event]
-      when "home"
-        @event = "home"
-        @home_photos = HomePhoto.all
-        @page_modules = PageModule.all
       when "about"
         @event = "about"
       when "professionals"
@@ -15,6 +11,10 @@ class SiteController < ApplicationController
       when "contact"
         @event = "contact"
         @contact = "text"
+      else
+        @event = "home"
+        @home_photos = HomePhoto.all
+        @page_modules = PageModule.all
     end 
   end
 end
