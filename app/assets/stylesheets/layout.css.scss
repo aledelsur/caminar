@@ -97,7 +97,12 @@ body{
     margin-bottom: 50px;
     background: white;
     .content{
-      margin-left: 23%; margin-right: 23%;
+      height: 50%;
+      margin-left: 15%;
+      margin-right: 15%;
+      margin-top: 3%;
+      padding: 3%;
+      width: 60%;
       .title{@include fon-title;}
       .text{width: 22%;}
     }
