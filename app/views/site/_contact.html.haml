@@ -22,4 +22,4 @@
                 = text_area_tag "Contenido"
       = submit_tag "Enviar"  
   .map  
-    #maps_canvas
+    = image_tag "http://maps.google.com/maps/api/staticmap?center=#{@contact_page.contact_address}&zoom=14&size=256x256&maptype=roadmap&markers=color:red%7Clabel:G%#{@contact_page.latitude.to_s},#{@contact_page.longitude.to_s}&sensor=false"
