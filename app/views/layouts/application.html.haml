@@ -13,7 +13,7 @@
     = render "/site/map"
 
     = csrf_meta_tags
-  %body
+  %body{:onload => ("initialize()")}
     .wrapped
       .main-container
         .header
