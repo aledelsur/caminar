@@ -8,6 +8,7 @@ Caminar::Application.routes.draw do
 
   # SITE CONTROLLER
   match '/:event', to: "site#index", as: "index"
+  match '/contact_email', to: "site#send_email", as: "send_email"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,6 +1,6 @@
 ActiveAdmin.register Professional do
 
-  actions :index, :edit, :new, :destroy, :update
+  actions :index, :edit, :new, :create, :destroy, :update
   filter :name
 
   menu :label => "Profesionales"

@@ -10,11 +10,15 @@ class SiteController < ApplicationController
         @professionals = Professional.all
       when "contact"
         @event = "contact"
-        @contact = "text"
+        @contact_page = Page.find_by_key("contact")
       else
         @event = "home"
         @home_photos = HomePhoto.all
         @page_modules = PageModule.all
     end 
+  end
+
+  def send_email
+    
   end
 end
