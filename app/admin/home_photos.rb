@@ -2,11 +2,9 @@ ActiveAdmin.register HomePhoto do
   #Eliminar filters
   config.clear_sidebar_sections!
 
-  # if HomePhoto.all.size < 3
-  #   actions :index, :new, :edit, :update, :destroy, :create
-  # else
-  #   actions :index, :edit, :update, :destroy
-  # end
+
+  actions :index, :edit, :show, :update, :destroy
+  
   menu :label => "Fotos de Portada"
   form :html => { :enctype => "multipart/form-data" } do |f|
     f.inputs "Fotos de portada" do
