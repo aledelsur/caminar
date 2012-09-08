@@ -98,9 +98,7 @@ body{
     background: white;
     .content{
       height: 50%;
-      margin-left: 15%;
-      margin-right: 15%;
-      margin-top: 3%;
+      margin: auto;
       padding: 3%;
       width: 60%;
       .title{@include fon-title;}
