@@ -91,15 +91,15 @@ body{
     }
   }
   .footer{
-    border:1px solid black;
+    border:2px solid gray;
     width: 100%;
     height: 314px;
     margin-bottom: 50px;
     background: white;
     .content{
-      margin-left: 23%; margin-right: 23%;
+      width: 780px;
+      margin: auto;
       .title{@include fon-title;}
-      .text{width: 22%;}
     }
   }
   .home_photo {

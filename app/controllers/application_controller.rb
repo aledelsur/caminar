@@ -4,5 +4,6 @@ class ApplicationController < ActionController::Base
 
   def site_values 
     ActionMailer::Base.default_url_options[:host] = 'localhost:3000'
-  end  
+    @contact_page = Page.find_by_key("contact")
+  end
 end
