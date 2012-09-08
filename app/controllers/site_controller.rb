@@ -10,7 +10,6 @@ class SiteController < ApplicationController
         @professionals = Professional.all
       when "contact"
         @event = "contact"
-        @contact_page = Page.find_by_key("contact")
       else
         @event = "home"
         @home_photos = HomePhoto.all
@@ -18,7 +17,10 @@ class SiteController < ApplicationController
     end 
   end
 
-  def send_email
-    
+  def new
+    Contact.new_contact(params).deliver
+    flash[:notice] = "Gracias! Tu consulta fue enviada."
+    @event = "contact"
+    render "index"
   end
 end

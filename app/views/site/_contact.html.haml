@@ -1,25 +1,24 @@
 .middle
   .contact-title
     Contacto
+    %span{:style => "color:red;"}
+      = notice
   .contact
-    .left
-      = @contact_page.contact_address
+    - if @contact_page
+      .left
+        .address 
+          = address
+        %br
+        .map  
+          = map 
     .right
-      = form_tag send_email_path do
-        %table
-          %thead
-            %tr
-              %td
-                = text_field_tag "Nombre", nil, :placeholder=> "Nombre"
-            %tr
-              %td
-                = text_field_tag "Email", nil, :placeholder=> "Email"
-            %tr
-              %td
-                = text_field_tag "Asunto", nil, :placeholder=> "Asunto"
-            %tr
-              %td
-                = text_area_tag "Contenido"
-        = submit_tag "Enviar"  
-  .map  
-    #map_canvas
+      = form_tag email_path do
+        .fields
+          .field
+            = text_field_tag :name, nil, :placeholder=> "Nombre"
+          .field
+            = text_field_tag :email, nil, :placeholder=> "Email"
+          .field
+            = text_area_tag :content
+          .field.submit
+            = submit_tag "Enviar"  
