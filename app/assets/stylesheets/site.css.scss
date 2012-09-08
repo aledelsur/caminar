@@ -55,6 +55,7 @@
     height: 500px; 
     padding: 3%;
     .left{
+      width: 30%;
       @include fon-text;
     }
     .right{

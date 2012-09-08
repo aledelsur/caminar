@@ -10,15 +10,15 @@
           = address
         %br
         .map  
-          = map 
-    .right
-      = form_tag email_path do
-        .fields
-          .field
-            = text_field_tag :name, nil, :placeholder=> "Nombre"
-          .field
-            = text_field_tag :email, nil, :placeholder=> "Email"
-          .field
-            = text_area_tag :content
-          .field.submit
-            = submit_tag "Enviar"  
+          = map
+      .right
+        = form_tag email_path do
+          .fields
+            .field
+              = text_field_tag :name, nil, :placeholder=> "Nombre"
+            .field
+              = text_field_tag :email, nil, :placeholder=> "Email"
+            .field
+              = text_area_tag :content
+            .field.submit
+              = submit_tag "Enviar"  
