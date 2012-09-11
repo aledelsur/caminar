@@ -109,8 +109,11 @@ body{
   .page_modules{
     margin-bottom: 24px;
     .module{
+      &#module-1{
+        margin-right:33px;
+        margin-left:33px;
+      }
       float: left;
-      margin-right: 22px;
       padding: 2%;
       width: 27%;
       .title{@include fon-title; margin-bottom: 2%;}

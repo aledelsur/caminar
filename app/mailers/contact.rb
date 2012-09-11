@@ -1,8 +1,9 @@
 class Contact < ActionMailer::Base
-  default from: params[:email]
+  default from: "no-responder@from.com"
 
   def new_contact(params=nil)
     @content = params[:content]
+    @email = params[:email]
     mail(:to => "lucasminissale@gmail.com", :subject => "#{params[:name]} te hizo una consulta!")
   end
 end

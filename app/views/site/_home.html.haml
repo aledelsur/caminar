@@ -10,8 +10,8 @@
         .clear.s3sliderImage
 -if @page_modules && @page_modules.size == 3
   .page_modules
-    - @page_modules.each do |page_module|
-      .module
+    - @page_modules.each_with_index do |page_module, i|
+      .module{:id => "module-#{i}"}
         .title
           = page_module.title
         .text

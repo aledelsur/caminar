@@ -1,8 +1,10 @@
 .middle
   .contact-title
     Contacto
-    %span{:style => "color:red;"}
-      = notice
+    - if notice
+      %br
+      %span{:style => "color:red;"}
+        = notice
   .contact
     - if @contact_page
       .left
