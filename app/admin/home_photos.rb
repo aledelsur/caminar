@@ -3,7 +3,7 @@ ActiveAdmin.register HomePhoto do
   config.clear_sidebar_sections!
 
 
-  actions :index, :edit, :show, :update, :destroy
+  actions :index, :edit, :show, :update, :destroy, :new, :create
   
   menu :label => "Fotos de Portada"
   form :html => { :enctype => "multipart/form-data" } do |f|
