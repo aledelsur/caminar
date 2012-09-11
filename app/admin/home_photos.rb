@@ -9,7 +9,7 @@ ActiveAdmin.register HomePhoto do
   form :html => { :enctype => "multipart/form-data" } do |f|
     f.inputs "Fotos de portada" do
       f.input :photo, :hint => f.template.image_tag(f.object.photo.url(:thumb))
-      f.input :text, :as => :rich, :config => { :width => '50%', :height => '200px' }
+      f.input :text, :as => :rich, :config => { :width => '75%', :height => '200px' }
     end
     f.buttons
   end
