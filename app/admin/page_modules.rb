@@ -7,16 +7,19 @@ ActiveAdmin.register PageModule do
 
   menu :label => "Modulos"
   index do
-    column :title
-    column :text
+    column "Titulo" do |o|
+      o.title
+    end
+    column "Texto" do |o|
+      o.text
+    end
     default_actions
   end
 
   form do |f|
     f.inputs "Datos del nuevo modulo" do
-      f.input :title
-      f.input :text
-      f.input :position
+      f.input :title, :label => "Titulo"
+      f.input :text, :label => "Texto"
     end
     f.buttons
   end  

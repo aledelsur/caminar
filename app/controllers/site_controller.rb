@@ -5,15 +5,18 @@ class SiteController < ApplicationController
   	case params[:event]
       when "about"
         @event = "about"
+        @page = Page.where(:key => "Quienes somos").first
       when "professionals"
         @event = "professionals"
+        @page = Page.where(:key => "Profesionales").first
         @professionals = Professional.all
       when "contact"
         @event = "contact"
+        @page = Page.where(:key => "Contacto").first
       else
         @event = "home"
         @home_photos = HomePhoto.all
-        @page_modules = PageModule.all
+        @page_modules = PageModule.all.reverse
     end 
   end
 

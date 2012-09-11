@@ -10,7 +10,6 @@ ActiveAdmin.register HomePhoto do
     f.inputs "Fotos de portada" do
       f.input :photo, :hint => f.template.image_tag(f.object.photo.url(:thumb))
       f.input :text
-      f.input :position
     end
     f.buttons
   end

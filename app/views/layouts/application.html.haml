@@ -17,9 +17,9 @@
         .header
           .top
             .slogan
-              %span Slogan
+              %span Caminar
             .call-number
-              Llamanos al 1551822
+              = @telefono
           .menu
             .button.first
               = link_to raw("<span>Home</span>"), index_path("home"), :class => ("selected" if @event == "home") 
@@ -30,5 +30,3 @@
             .button.last
               = link_to raw("<span>Contacto</span>"), index_path("contact"), :class => ("selected" if @event == "contact") 
         = yield
-    .footer
-      =render partial: "footer"
