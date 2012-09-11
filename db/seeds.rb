@@ -1,32 +1,24 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
-
 home = Page.find_by_key("Inicio")
 unless home
-  Page.create(:key=>"Inicio")
+  Page.create(:key=>"Inicio", :title=>"Incio")
   puts "Creating Page Home"
 end
 
 about = Page.find_by_key("Quienes somos")
-unless about 
-  Page.create(:key=>"Quienes somos")
+unless about
+  Page.create(:key=>"Quienes somos", :title=>"Quienes somos")
   puts "Creating Page About"
 end
 
 professionals = Page.find_by_key("Profesionales")
 unless professionals
-  Page.create(:key=>"Profesionales")
+  Page.create(:key=>"Profesionales", :title=>"Profesionales")
   puts "Creating Page Professionals"
 end
 
 contact = Page.find_by_key("Contacto")
-unless contact 
-  Page.create(:key=>"Contacto")
+unless contact
+  Page.create(:key=>"Contacto", :title=>"Contacto")
   puts "Creating Page Contact"
 end
 

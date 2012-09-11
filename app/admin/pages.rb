@@ -4,8 +4,10 @@ ActiveAdmin.register Page do
   filter :title
 
   menu :label => "Paginas"
+
+
   form do |f|
-    f.inputs "Datos de la pagina" do
+    f.inputs "Datos de la pagina - #{f.object.key}" do
       if f.object.key == "Inicio" 
         f.input :meta_title, :label => "Meta titulo (Google)"
         f.input :meta_description, :label => "Meta Descripcion (Google)"
