@@ -19,7 +19,7 @@ ActiveAdmin.register Professional do
       f.input :name, :label => "Nombre (no sera mostrado en el sitio web)"
       f.input :photo, :hint => f.template.image_tag(f.object.photo.url(:thumb)), :label => "Foto"
       f.input :title, :label => "Titulo (sera mostrado en el sitio web)"
-      f.input :text, :label => "Texto (sera mostrado en el sitio web)"
+      f.input :text, :label => "Texto (sera mostrado en el sitio web)", :as => :rich, :config => { :width => '75%', :height => '200px' }
       f.input :position, :label => "Posicion (no sera mostrado en el sitio web)"
      end
    	f.buttons

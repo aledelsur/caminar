@@ -7,5 +7,7 @@ class ApplicationController < ActionController::Base
     @contact_page = Page.find_by_key("Contacto")
     telefono = Option.where(:key => "telefono").first
     @telefono = telefono.value if telefono
+    @meta_title = Page.find_by_key("Inicio").meta_title
+    @meta_description = Page.find_by_key("Inicio").meta_description
   end
 end

@@ -6,7 +6,7 @@
           %li.s3sliderImage
             =image_tag(hp.photo.url(:home))
             %span
-              = hp.text
+              = hp.text.html_safe
         .clear.s3sliderImage
 -if @page_modules && @page_modules.size == 3
   .page_modules
@@ -15,5 +15,5 @@
         .title
           = page_module.title
         .text
-          = page_module.text
+          = page_module.text.html_safe
     .clear

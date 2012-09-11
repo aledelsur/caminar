@@ -19,7 +19,7 @@ ActiveAdmin.register PageModule do
   form do |f|
     f.inputs "Datos del nuevo modulo" do
       f.input :title, :label => "Titulo"
-      f.input :text, :label => "Texto"
+      f.input :text, :label => "Texto", :as => :rich, :config => { :width => '75%', :height => '200px' }
     end
     f.buttons
   end  
