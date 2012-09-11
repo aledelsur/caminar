@@ -8,25 +8,25 @@
 
 home = Page.find_by_key("home")
 unless home
-  Page.create(:key=>"home")
+  Page.create(:key=>"home", :title=>"Home")
   puts "Creating Page Home"
 end
 
 about = Page.find_by_key("about")
 unless about 
-  Page.create(:key=>"about")
+  Page.create(:key=>"about", :title=>"Quienes somos")
   puts "Creating Page About"
 end
 
 professionals = Page.find_by_key("professionals")
 unless professionals
-  Page.create(:key=>"professionals")
+  Page.create(:key=>"professionals", :title=>"Profesionales")
   puts "Creating Page Professionals"
 end
 
 contact = Page.find_by_key("contact")
 unless contact 
-  Page.create(:key=>"contact")
+  Page.create(:key=>"contact", :title=>"Contacto")
   puts "Creating Page Contact"
 end
 

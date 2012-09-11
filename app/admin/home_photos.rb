@@ -3,13 +3,13 @@ ActiveAdmin.register HomePhoto do
   config.clear_sidebar_sections!
 
 
-  actions :index, :edit, :show, :update, :destroy, :new, :create
+  actions :index, :edit, :update, :destroy, :new, :create
   
   menu :label => "Fotos de Portada"
   form :html => { :enctype => "multipart/form-data" } do |f|
     f.inputs "Fotos de portada" do
       f.input :photo, :hint => f.template.image_tag(f.object.photo.url(:thumb))
-      f.input :text
+      f.input :text, :as => :rich, :config => { :width => '50%', :height => '200px' }
       f.input :position
     end
     f.buttons

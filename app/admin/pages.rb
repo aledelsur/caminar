@@ -4,9 +4,10 @@ ActiveAdmin.register Page do
   filter :title
 
   menu :label => "Paginas"
+
+
   form do |f|
-    f.inputs "Datos de la pagina" do
-      f.input :title
+    f.inputs "Datos de la pagina - #{f.object.title}" do
       f.input :text
       if f.object.key == "contact"
         f.input :contact_address
