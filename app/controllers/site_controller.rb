@@ -13,6 +13,8 @@ class SiteController < ApplicationController
       when "contact"
         @event = "contact"
         @page = Page.where(:key => "Contacto").first
+      when "comments"
+        @event = "comments"
       else
         @event = "home"
         @home_photos = HomePhoto.all

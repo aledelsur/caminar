@@ -32,6 +32,8 @@
               = link_to raw("<span>¿Quienes somos?</span>"), index_path("about"), :class => ("selected" if @event == "about") 
             .button
               = link_to raw("<span>Profesionales</span>"), index_path("professionals"), :class => ("selected" if @event == "professionals") 
+            .button
+              = link_to raw("<span>Comentarios</span>"), index_path("comments"), :class => ("selected" if @event == "comments") 
             .button.last
               = link_to raw("<span>Contacto</span>"), index_path("contact"), :class => ("selected" if @event == "contact") 
         = yield
