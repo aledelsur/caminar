@@ -15,6 +15,8 @@ class SiteController < ApplicationController
         @page = Page.where(:key => "Contacto").first
       when "comments"
         @event = "comments"
+        @comment = SiteComment.new
+        @comments = SiteComment.paginate :per_page => 6, :page => params[:page], :order=>"created_at DESC"
       else
         @event = "home"
         @home_photos = HomePhoto.all

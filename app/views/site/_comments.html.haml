@@ -1,3 +1,35 @@
 .middle
-  .professional-title
-    Dejanos tu comentario
+  - if notice
+    %p.notice= notice
+  .comment-title
+    .left
+      Dejanos tu comentario
+    .right
+      Últimos Comentarios
+  .clear
+  .comment-section
+    .left
+      = form_for @comment do |f|
+        .fields
+          .field
+            = f.text_field :name, :placeholder=> "Name"
+          .field
+            = f.text_field :email, :placeholder=> "Email"
+          .field
+            = f.text_area :text
+          .field.submit
+            = f.submit "Comentar"
+    .right
+      .timeline
+        - @comments.each do |comment|
+          .comment
+            %span{:class=>"name"}
+              = comment.name
+            %span{:class=>"date"}
+              = comment.created_at.strftime("%d/%m/%Y - %H:%M %p")
+            .text
+              = comment.text
+    .clear
+      = will_paginate @comments, :next_label=>"Siguiente", :previous_label=>"Atrás"
+
+
