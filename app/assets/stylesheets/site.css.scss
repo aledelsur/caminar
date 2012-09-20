@@ -60,24 +60,26 @@ form{
   padding-top: 3%;
   
   .one-professional{
-    box-shadow: 10px 10px 5px #888; @include white-degrade; border: 1px solid; height: 210px; margin: auto auto 2%; padding: 1%; width: 90%;
+    box-shadow: 10px 10px 5px #888; @include white-degrade;
+    height: 160px;
+    margin: auto auto 2%;
+    padding: 0.5%;
+    width: 90%;
     .left{
       height: 100%;
-      width: 40%;
+      width: 180px;
       
-      img{height: 210px; width: 320px;}
+      img{height: 150px; width: 150px;}
     }
-    
+    .content{
+      height: 10%; padding: 3%;   
+      .name{@include fon-title; margin-bottom: 2%;}
+      .text{@include fon-text;}
+    }
     .right{
+      float: left !important;
       height: 100%; 
       width: 60%;
-      .content{
-        height: 65%; padding: 7%;
-          
-        .name{@include fon-title; margin-bottom: 2%;}
-          
-        .text{@include fon-text;}
-      }
     }
   }
 }

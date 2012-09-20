@@ -16,11 +16,10 @@ ActiveAdmin.register Professional do
 
   form :html => { :enctype => "multipart/form-data" } do |f|
     f.inputs "Nuevo Profesional" do
-      f.input :name, :label => "Nombre (no sera mostrado en el sitio web)"
+      f.input :name, :label => "Nombre y profesion (Ej: Dr. Biga, Oscar - Cardiologo)"
       f.input :photo, :hint => f.template.image_tag(f.object.photo.url(:thumb)), :label => "Foto"
-      f.input :title, :label => "Titulo (sera mostrado en el sitio web)"
-      f.input :text, :label => "Texto (sera mostrado en el sitio web)", :as => :rich, :config => { :width => '75%', :height => '200px' }
-      f.input :position, :label => "Posicion (no sera mostrado en el sitio web)"
+      f.input :title, :label => "Titulo"
+      f.input :text, :label => "Texto", :as => :rich, :config => { :width => '75%', :height => '200px' }
      end
    	f.buttons
   end

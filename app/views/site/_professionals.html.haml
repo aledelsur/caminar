@@ -6,11 +6,19 @@
   .professionals
     - @professionals.each do |professional|
       .one-professional
-        .left
-          = image_tag professional.photo.url(:small)
-        .right
+        - if professional.photo.file?
+          .left
+            = image_tag professional.photo.url(:small)
+        - if professional.photo.file?
+          .right
+            .content
+              .name
+                = professional.title
+              .text
+                = raw professional.text
+        -else
           .content
             .name
               = professional.title
             .text
-              = professional.text
+              = raw professional.text
