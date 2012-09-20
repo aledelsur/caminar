@@ -125,7 +125,7 @@ body{
       float: left;
       padding: 2%;
       width: 26%;
-      height: 185px;
+      min-height: 185px;
       .title{@include fon-title; margin-bottom: 2%;}
       .text{@include fon-text;} 
       box-shadow: 10px 10px 5px #888;
