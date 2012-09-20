@@ -1,11 +1,7 @@
-class CommentsController < ApplicationController
-
-  def index
-    
-  end
+class SiteCommentsController < ApplicationController
 
   def create
-    @comment = Comment.create(params[:comment])
+    @comment = SiteComment.create(params[:site_comment])
     flash[:notice] = "Gracias por dejarnos tu comentario."
     redirect_to root_path(:event=>"comments")
   end

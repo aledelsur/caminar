@@ -29,6 +29,7 @@
               = comment.created_at.strftime("%d/%m/%Y - %H:%M %p")
             .text
               = comment.text
+    .clear
       = will_paginate @comments, :next_label=>"Siguiente", :previous_label=>"Atrás"
 
 
