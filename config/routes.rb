@@ -5,6 +5,7 @@ Caminar::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
 
   root :to=> "site#index"
+  resources :comments, only: [:create]
 
   # SITE CONTROLLER
   match '/new', to: "site#new", as: "email"
