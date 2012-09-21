@@ -14,14 +14,14 @@
 @mixin page-title {color: #888888; font: 22px/1.3em "Overlock","sans-serif";}
 
 body{
-  background: #008391;
+  background: #C1EB97;
   .main-container{
     margin: auto;
     width:980px;
     .header{
       height: 206px;
       .slogan{
-        color: white;
+        color: #008391;
         width: 30%;
         float: left;
         padding: 45px;
@@ -30,7 +30,7 @@ body{
         }
       }
       .call-number{
-        color: white;
+        color: #008391;
         width: 55%;
         float: right;
         padding-top: 66px;
@@ -103,8 +103,8 @@ body{
     margin-bottom: 50px;
     margin-top: 50px;
     .links{
-      span{margin-right: 1%; font-size: 14px; color: white;}
-      span a{color: white;}
+      span{margin-right: 1%; font-size: 14px; color: #008391; }
+      span a{color: #008391;}
       width: 466px;
       margin: auto;
     }
