@@ -1,20 +1,3 @@
 .footer
   .links
-    %span
-      = link_to "Home", root_path
-    %span
-      |
-    %span
-      = link_to "¿Quiénes somos?", root_path(:event=>"about")
-    %span
-      |
-    %span
-      = link_to "Profesionales", root_path(:event=>"professionals")
-    %span
-      |
-    %span
-      = link_to "Comentarios", root_path(:event=>"comments")
-    %span
-      |
-    %span
-      = link_to "Contacto", root_path(:event=>"contact")
+    = raw @footer

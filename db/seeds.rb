@@ -31,5 +31,13 @@ end
 option = Option.where(:key => "telefono").first
 unless option
   Option.create(:key=>"telefono")
-  puts "Creando telefono"
+  puts "Creando telefono..."
+  puts "Done"
+end
+
+option = Option.where(:key => "footer").first
+unless option
+  Option.create(:key=>"footer")
+  puts "Creando foter..."
+  puts "Done"
 end

@@ -7,14 +7,24 @@ ActiveAdmin.register Option do
 
   menu :label => "Opciones"
   index do
-    column :key
-    column :value
+    column "Seccion" do |o|
+      o.key
+    end
+    
+    column "Valor" do |o|
+      raw(o.value)
+    end
+    
     default_actions
   end
 
   form do |f|
     f.inputs "Datos de la opcion" do
-      f.input :value
+      unless f.object.key == "footer"
+        f.input :value
+      else
+        f.input :value, :as => :rich, :config => { :width => '75%', :height => '200px' }
+      end
     end
     f.buttons
   end

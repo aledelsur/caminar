@@ -1,27 +1,14 @@
-@mixin white-degrade {
-  background-image: -moz-linear-gradient(top, #ffffff, #f4f4f4);
-  background-image: -ms-linear-gradient(top, #ffffff, #f4f4f4);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#f4f4f4));
-  background-image: -webkit-linear-gradient(top, #ffffff, #f4f4f4);
-  background-image: -o-linear-gradient(top, #ffffff, #f4f4f4);
-  background-image: linear-gradient(top, #ffffff, #f4f4f4);
-}
-@mixin slogan-font{
-  font: normal normal normal 42px/1.3em Overlock, sans-serif;
-}
-@mixin fon-title { color: #007B9A; font: 22px/1.3em "Overlock","sans-serif";}
-@mixin fon-text {color: #606060; font: 13px/1.3em "Open Sans","sans-serif";}
-@mixin page-title {color: #888888; font: 22px/1.3em "Overlock","sans-serif";}
+@import "mixins";
 
 body{
-  background: #C1EB97;
+  background: #A8A75C;
   .main-container{
     margin: auto;
     width:980px;
     .header{
       height: 206px;
       .slogan{
-        color: #008391;
+        color: white;
         width: 30%;
         float: left;
         padding: 45px;
@@ -30,7 +17,7 @@ body{
         }
       }
       .call-number{
-        color: #008391;
+        color: white;
         width: 55%;
         float: right;
         padding-top: 66px;
@@ -102,11 +89,15 @@ body{
     width: 100%;
     margin-bottom: 50px;
     margin-top: 50px;
+    color: white;
+    font-size: 10pt;
+    a{
+      color: white;
+    }
     .links{
-      span{margin-right: 1%; font-size: 14px; color: #008391; }
-      span a{color: #008391;}
-      width: 466px;
-      margin: auto;
+      span{margin-right: 1%; font-size: 14px; color: white; }
+      span a{color: white;}
+      text-align: center;
     }
   }
   .home_photo {
@@ -115,6 +106,7 @@ body{
 
   .page_modules{
     margin-bottom: 24px;
+    padding-left:28px;
     .module{
       border-radius: 4px;
       border: 1px solid #888;
@@ -122,9 +114,13 @@ body{
         margin-right:33px;
         margin-left:33px;
       }
+      &#module-2{
+        width: 92%;
+        margin-top: 35px;
+      }
       float: left;
       padding: 2%;
-      width: 26%;
+      width: 42.3%;
       min-height: 185px;
       .title{@include fon-title; margin-bottom: 2%;}
       .text{@include fon-text;} 

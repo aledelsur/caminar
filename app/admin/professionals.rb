@@ -5,12 +5,17 @@ ActiveAdmin.register Professional do
 
   menu :label => "Profesionales"
   index do
-  	column :photo do |photo|
+  	column "Foto" do |photo|
   	  image_tag(photo.photo, :class=>"home_photo_img")
   	end
-    column :title
-    column :text
-    default_actions
+    column "Titulo" do |p|
+      p.title
+    end
+
+    column "Texto" do |p|
+      raw(p.text)
+    end
+
   end
 
   form :html => { :enctype => "multipart/form-data" } do |f|

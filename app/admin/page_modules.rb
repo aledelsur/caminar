@@ -11,7 +11,7 @@ ActiveAdmin.register PageModule do
       o.title
     end
     column "Texto" do |o|
-      o.text
+      raw(o.text)
     end
     default_actions
   end

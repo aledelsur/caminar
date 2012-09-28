@@ -1,0 +1,14 @@
+@mixin white-degrade {
+  background-image: -moz-linear-gradient(top, #ffffff, #f4f4f4);
+  background-image: -ms-linear-gradient(top, #ffffff, #f4f4f4);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#f4f4f4));
+  background-image: -webkit-linear-gradient(top, #ffffff, #f4f4f4);
+  background-image: -o-linear-gradient(top, #ffffff, #f4f4f4);
+  background-image: linear-gradient(top, #ffffff, #f4f4f4);
+}
+@mixin slogan-font{
+  font: normal normal normal 42px/1.3em Overlock, sans-serif;
+}
+@mixin fon-title { color: #007B9A; font: 22px/1.3em "Overlock","sans-serif";}
+@mixin fon-text {color: #606060; font: 13px/1.3em "Open Sans","sans-serif";}
+@mixin page-title {color: #888888; font: 22px/1.3em "Overlock","sans-serif";}
