@@ -1,3 +1,5 @@
+require "bundler/capistrano"
+
 set :application, "caminar"
 set :repository,  "git@github.com:aledelsur/caminar.git"
 
