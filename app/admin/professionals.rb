@@ -15,7 +15,7 @@ ActiveAdmin.register Professional do
     column "Texto" do |p|
       raw(p.text)
     end
-
+    default_actions
   end
 
   form :html => { :enctype => "multipart/form-data" } do |f|
