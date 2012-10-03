@@ -1,8 +1,8 @@
-require "bundler/capistrano"
+#require "bundler/capistrano"
 
 set :application, "caminar"
 set :repository,  "git@github.com:aledelsur/caminar.git"
-
+#set :use_sudo, true
 set :scm, :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
