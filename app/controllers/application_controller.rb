@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  include SimpleCaptcha::ControllerHelpers
   protect_from_forgery
   I18n.locale = 'es'
 

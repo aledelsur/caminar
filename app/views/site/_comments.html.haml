@@ -17,6 +17,8 @@
             = f.text_field :email, :placeholder=> "Email"
           .field
             = f.text_area :text
+          .field
+            = show_simple_captcha 
           .field.submit
             = f.submit "Comentar"
     .right

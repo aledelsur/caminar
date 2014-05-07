@@ -16,6 +16,7 @@ gem 'aws-sdk', '~> 1.3.4'
 gem 'rich'
 gem 'will_paginate', '~> 3.0.0'
 gem 'thin'
+gem "galetahub-simple_captcha", :require => "simple_captcha"
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
